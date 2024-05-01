@@ -1,0 +1,60 @@
+package calculos.calculados;
+
+import java.util.Scanner;
+
+public class Calculo {
+    
+    
+    public static void main(String[] args) {
+        
+        
+        
+        double n1, n2;
+        double soma, subtracao, multiplicacao,divisao;
+        int op;
+        
+        Scanner entrada = new Scanner(System.in);
+        
+        
+        System.out.println("Informe o primeiro valor: ");
+        n1 = entrada.nextDouble(); 
+        System.out.println("Informe o segundo valor:");
+        n2 = entrada.nextDouble();
+        
+        System.out.println("SELECIONE UMA OPERACAO: ");
+        System.out.println("[1] - Somar");
+        System.out.println("[2] - Subtrair");
+        System.out.println("[3] - Multiplicar");
+        System.out.println("[4] - Dividir");
+        System.out.println("Digite sua opcao: ");
+        op = entrada.nextInt();
+        
+        switch (op){
+            case 1 -> {
+                soma = n1+n2;
+                System.out.println("A soma e:"+soma);
+            }
+                
+            case 2 -> {
+                subtracao = n1+n2;
+                System.out.println("A subtracao e: "+ subtracao);
+            }
+                
+            case 3 -> {
+                multiplicacao = n1*n2;
+                System.out.println("A multiplicacao e:"+ multiplicacao);
+            }
+                
+            case 4 -> {
+                if(n1<n2){
+                    System.out.println("Impossível de realizar o calculo");
+                }
+                divisao = n1/n2;
+                System.out.println("A divisao e"+ divisao);
+            }
+            
+            default -> System.out.println("OPERAÇÃO INVÁLIDA!!!");
+            
+        }
+    }
+}
